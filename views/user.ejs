@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>User Information</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f2f2f2;
+         padding: 20px;
+      }
+      h1 {
+         color: #333;
+         text-align: center;
+      }
+      .user-info {
+         margin-bottom: 10px;
+         background-color: #fff;
+         padding: 15px 10px;
+         cursor: pointer;
+         border-radius: 5px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+         transition: all 0.3s ease-out;
+      }
+
+      .user-info:hover {
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .user-info span {
+         font-weight: bold;
+      }
+      .user-info span:first-child {
+         margin-right: 10px;
+      }
+      /* Additional styles */
+      .user-info:nth-child(odd) {
+         background-color: #f9f9f9;
+      }
+      .user-info span {
+         color: #555;
+      }
+      .user-info span:first-child {
+         color: #333;
+      }
+   </style>
+</head>
+<body>
+   <h1>User Information</h1>
+   <div class="user-info">
+      <span>ID:</span> <%= data.id %>
+   </div>
+   <div class="user-info">
+      <span>Name:</span> <%= data.name %>
+   </div>
+   <div class="user-info">
+      <span>Username:</span> <%= data.username %>
+   </div>
+   <div class="user-info">
+      <span>Email:</span> <%= data.email %>
+   </div>
+   <div class="user-info">
+      <span>Address:</span> <%= data.address.street %>, <%= data.address.suite %>, <%= data.address.city %>, <%= data.address.zipcode %>
+   </div>
+   <div class="user-info">
+      <span>Phone:</span> <%= data.phone %>
+   </div>
+   <div class="user-info">
+      <span>Website:</span> <%= data.website %>
+   </div>
+   <div class="user-info">
+      <span>Company:</span> <%= data.company.name %>
+   </div>
+</body>
+</html>
